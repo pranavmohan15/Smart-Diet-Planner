@@ -1,0 +1,52 @@
+.form-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-title {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.diet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
