@@ -1,14 +1,12 @@
 export const calculateCalories = (age, gender, weight, height, activityLevel, goal) => {
-    // Using Mifflin-St Jeor Equation
-    // For simplicity, let's assume a generic formula if gender is not provided, 
-    // or we can just ask for it. The prompt didn't explicitly ask for gender, 
-    // so we'll use a neutral average or assume a base. Let's use Male formula as base 
-    // and subtract a bit to be safe, or just use a simplified formula.
-    // M: 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) + 5
-    // F: 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161
-    // We'll use an average offset of -78 if gender is unknown.
+    // Using precise Mifflin-St Jeor Equation based on gender
+    let bmr = (10 * weight) + (6.25 * height) - (5 * age);
 
-    const bmr = (10 * weight) + (6.25 * height) - (5 * age) - 78;
+    if (gender === 'male') {
+        bmr += 5;
+    } else {
+        bmr -= 161;
+    }
 
     const activityMultipliers = {
         sedentary: 1.2,

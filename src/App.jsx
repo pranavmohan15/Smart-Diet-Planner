@@ -11,15 +11,18 @@ function App() {
 
   const handleGeneratePlan = (userData) => {
     setUserInfo(userData)
+
     const calData = calculateCalories(
       userData.age,
-      'neutral',
+      userData.gender,
       userData.weight,
       userData.height,
       userData.activityLevel,
       userData.goal
     )
+
     const newPlan = generateDietPlan(userData.diet)
+
     setDietPlan(newPlan)
     setCalories(calData.targetCalories)
     window.scrollTo({ top: 0, behavior: 'smooth' })

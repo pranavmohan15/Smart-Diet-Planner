@@ -6,11 +6,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     flex-wrap: wrap;
     gap: 1.5rem;
-    background: linear-gradient(135deg, var(--surface) 0%, #f0fdf4 100%);
-    border-left: 4px solid var(--primary);
+    background: linear-gradient(135deg, rgba(0, 240, 181, 0.05) 0%, rgba(0, 135, 102, 0.05) 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
 }
 
 .dashboard-title-area h2 {
@@ -30,11 +32,12 @@
 }
 
 .calorie-box {
-    background-color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-sm);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
     text-align: center;
+    backdrop-filter: var(--glass-blur);
 }
 
 .calorie-label {
@@ -48,9 +51,9 @@
 
 .calorie-value {
     display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-dark);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
 }
 
 .calorie-value small {
@@ -68,18 +71,19 @@
 .day-card {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .day-header {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--card-border);
     padding-bottom: 0.75rem;
     margin-bottom: 0.5rem;
 }
 
 .day-header h3 {
-    color: var(--primary);
-    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-size: 1.35rem;
+    font-weight: 700;
 }
 
 .meal-section {
@@ -88,31 +92,32 @@
 }
 
 .meal-type {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--primary-light);
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     margin-bottom: 0.25rem;
 }
 
 .meal-desc {
-    font-size: 0.95rem;
-    color: var(--text);
-    line-height: 1.4;
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 .water-section {
     margin-top: auto;
     padding-top: 1rem;
-    border-top: 1px dashed var(--border);
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
-    color: #0284c7;
-    /* A nice water blue */
+    color: #4fc3f7;
+    /* Soft neon blue for water */
 }
 
 @media (max-width: 768px) {

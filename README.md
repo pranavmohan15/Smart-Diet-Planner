@@ -1,16 +1,48 @@
-# React + Vite
+# Smart Diet Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Smart Diet Planner is a modern, responsive web application that generates personalized 7-day diet plans. Tailored specifically with Indian and Kerala cuisine preferences, it calculates your daily caloric needs and provides a clear, day-by-day meal guide to help you reach your health goals.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Personalized Calorie Calculation**: Uses the Mifflin-St Jeor Equation to calculate your Total Daily Energy Expenditure (TDEE) and target calories based on your age, gender, height, weight, activity level, and health goal.
+- **Customized Meal Plans**: Generates a full 7-day meal plan (Breakfast, Lunch, Dinner, Snacks) based on your selected diet preference:
+  - Vegetarian
+  - Non-Vegetarian
+  - Vegan
+- **Indian/Kerala Cuisine Focus**: Meal suggestions include popular and healthy regional dishes like Appam, Puttu, Matta Rice, and various curries/stews.
+- **Hydration Tracking**: Includes daily water intake recommendations.
+- **Premium Dark UI**: Features a sleek, modern dark mode design with vibrant accents, glassmorphism effects, and smooth animations.
+- **Fully Responsive**: Optimized for seamless use across desktops, tablets, and mobile devices.
+- **Client-Side Only**: Runs entirely in the browser with no backend or login required. Your data stays private.
 
-## React Compiler
+## 🛠️ Tech Stack & Frontend Details
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 18](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/) - For lightning-fast Hot Module Replacement (HMR) and optimized builds.
+- **Styling**: Pure CSS (Vanilla CSS) using modern features like CSS Variables, Grid, Flexbox, and backdrop-filter for glassmorphism.
+- **Typography**: [Outfit](https://fonts.google.com/specimen/Outfit) font from Google Fonts.
+- **Icons**: SVG-based minimalistic icons.
 
-## Expanding the ESLint configuration
+### Project Structure
+- `src/App.jsx`: Main application component, manages state (user info, generated plan) and handles navigation between the input form and the dashboard.
+- `src/components/InputForm.jsx`: The data entry form where users input their biometrics and preferences.
+- `src/components/Dashboard.jsx`: Displays the generated 7-day plan, daily calorie target, and provides an option to start over.
+- `src/utils/dietGenerator.js`: The core logic engine. It contains the calorie calculation formulas and the extensive database of meal options, handling the generation of the final 7-day array.
+- `src/index.css` & `src/App.css`: Global styles, theme variables, and component-specific styling.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🏃‍♂️ Running Locally
+
+1. **Clone or Download the repository.**
+2. **Navigate to the project directory:**
+   ```bash
+   cd "Smart Diet Planner"
+   ```
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and navigate to the URL provided in the terminal (usually `http://localhost:5173`).

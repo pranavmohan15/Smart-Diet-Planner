@@ -1,28 +1,48 @@
 .form-card {
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(0, 240, 181, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .form-title {
-    color: var(--primary-dark);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .form-subtitle {
     color: var(--text-muted);
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .diet-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .form-row {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .form-row .form-group {
@@ -34,19 +54,52 @@
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
-    color: var(--text);
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background-color: rgba(0, 240, 181, 0.05);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 240, 181, 0.1);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group select option {
+    background-color: #1a1a1a;
+    color: white;
 }
 
 .submit-btn {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     width: 100%;
-    padding: 1rem;
+    padding: 1.1rem;
     font-size: 1.1rem;
-    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 500px) {
     .form-row {
         flex-direction: column;
+        gap: 1.5rem;
     }
 }

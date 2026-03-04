@@ -8,7 +8,8 @@ const InputForm = ({ onSubmit }) => {
         weight: '',
         activityLevel: 'sedentary',
         diet: 'vegetarian',
-        goal: 'maintain'
+        goal: 'maintain',
+        gender: 'female'
     });
 
     const handleChange = (e) => {
@@ -26,7 +27,8 @@ const InputForm = ({ onSubmit }) => {
             weight: Number(formData.weight),
             activityLevel: formData.activityLevel,
             diet: formData.diet,
-            goal: formData.goal
+            goal: formData.goal,
+            gender: formData.gender
         });
     };
 
@@ -50,6 +52,16 @@ const InputForm = ({ onSubmit }) => {
                             placeholder="e.g. 25"
                         />
                     </div>
+                    <div className="form-group">
+                        <label>Gender</label>
+                        <select name="gender" value={formData.gender} onChange={handleChange}>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div className="form-row">
                     <div className="form-group">
                         <label>Height (cm)</label>
                         <input
