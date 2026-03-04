@@ -2,6 +2,9 @@
 
 Smart Diet Planner is a modern, responsive web application that generates personalized 7-day diet plans. Tailored specifically with Indian and Kerala cuisine preferences, it calculates your daily caloric needs and provides a clear, day-by-day meal guide to help you reach your health goals.
 
+
+live:https://smart-diet-planner-two.vercel.app/
+
 ## 🚀 Features
 
 - **Personalized Calorie Calculation**: Uses the Mifflin-St Jeor Equation to calculate your Total Daily Energy Expenditure (TDEE) and target calories based on your age, gender, height, weight, activity level, and health goal.
